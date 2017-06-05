@@ -1,0 +1,126 @@
+<meta charset="utf-8">
+<!DOCTYPE>
+<html>
+<head>
+  <title>나의 웹페이지</title>
+  <style>
+body{background-color: rgba(189, 187, 180, 0.15);}
+  #center{  display: inline-flex;
+      width: 653px;
+    margin-left: 350px;
+    margin-top: 80px;}
+    #center #left{display: inline-block;
+    width:250px;
+    margin-right: 30px;
+  margin-top: 50px;}
+    #center #right{width: 300px;
+    display: inline-block;
+margin-left: 50;
+    text-align: center;}
+      #center #right #join{
+        padding-top: 30px;
+
+        margin-bottom: 20px;
+        background-color: white;
+        border-style: solid;
+            border-width: 1px;
+                border-color: rgba(158, 158, 158, 0.35);}
+                #center #right #join #logo{  margin-top: 20px; font-size: 40px;}
+                #center #right #join #message{ padding-left: 10px; padding-right:10px; }
+                #center #right #join #fblogin{ margin-top: 20px;}
+                #center #right #join #or{margin-top: 15px; display: inline-flex;}
+                 #center #right #join #or #bar1{width: 100px; margin-top: 25px; height: 0px; border-style: solid; border-color:#999; border-width: 2px;}
+                 #center #right #join #or #bar2{width: 100px; margin-top: 25px; height: 0px; border-style: solid; border-color:#999; border-width: 2px;}
+                #center #right #join #forms{margin-top: 20px;}
+                #center #right #join #terms{color: #999; font-size: 14px; margin-top: 7px; width: 225px; margin-left: 40px; margin-bottom: 30px;}
+      #center #right #login{background-color: white;
+      border-style: solid;
+          border-width: 1px;
+              border-color: rgba(158, 158, 158, 0.35);
+            height: 30px; padding-top: 15px; margin-top: 10px;}
+
+#warning{display: none;}
+
+  </style>
+</head>
+
+<body>
+  <div id="center">
+    <div id="left">  <img src="/images/addd.png" style="height: 500;"></div>
+    <div id="right">
+<div id="join">
+  <div id="logo">Instargram</div>
+  <div id="message">친구들의 사진과 동영상을 보려면 가입하세요.</div>
+  <div id="fblogin"><button type=“로그인” onclick=“alert()” style="width: 230;
+  height: 30; background-color:#3897f0; font-size:15;">페이스북으로 로그인</button> </div>
+  <div id="or"><div id="bar1"></div><div id="OR">또는</div> <div id="bar2"></div></div>
+  <div id="forms"><div id="form1"><input id="email" name="email"  placeholder="휴대폰 번호 또는 이메일 주소" style="width: 230;
+height: 30;" /><br /></div><div id="form2"><input id="name" name="name" placeholder="성명" style="width: 230;
+height: 30; margin-top:5px;" /><br /></div><div id="form3"><input id="nick" name="nick" placeholder="사용자 이름" style="width: 230;
+height: 30; margin-top:5px;" /><br /></div><div id="form4"><input type="password" id="password" placeholder="비밀 번호" style="width: 230;
+height: 30; margin-top:5px;" /><br /></div>
+</div>
+<div id="loginbt"><button type=“로그인” onclick=“alert()” style="width: 230;
+height: 30; background-color:#3897f0; font-size:15; margin-top:5px;">가입</button></div>
+<div id="warning" style="color:red;">필수 항목입니다.</div>
+<div id="terms">가입하면 Instargram의 약관 및 개인정보처리방침에 동의하게 됩니다.</div>
+</div>
+
+<div id="login">계정이 있으신가요? <a href=login style="text-decoration:none;">로그인</a></div>
+
+    </div>
+  </div>
+
+<script>
+
+
+var bt=document.getElementById('loginbt');
+var wa=document.getElementById('warning');
+var i1;
+  var i2;
+  var i3;
+  var i4;
+  var myArray1;
+  var myArray2;
+  var myArray3;
+  var myArray4;
+bt.onclick=function()
+{i1=document.getElementById('email').value;
+ i2=document.getElementById('name').value;
+ i3=document.getElementById('nick').value;
+ i4=document.getElementById('password').value;
+myArray1 =/^[a-zA-Z0-9]+@[a-zA-Z0-9]+$/.test(document.getElementById('email').value);
+myArray2 =/^[a-zA-Z]*$/.test(document.getElementById('name').value);
+myArray3 =/^[가-힣]*$/.test(document.getElementById('nick').value);
+myArray4 =/^[a-zA-Z0-9]*$/.test(document.getElementById('password').value);
+if (i1==""|!myArray1)
+document.getElementById("email").style.borderColor="red"
+else
+document.getElementById("email").style.borderColor="initial"
+if (i2==""|!myArray2)
+document.getElementById("name").style.borderColor="red"
+else
+document.getElementById("name").style.borderColor="initial"
+if (i3==""|!myArray3)
+document.getElementById("nick").style.borderColor="red"
+else
+document.getElementById("nick").style.borderColor="initial"
+if (i4==""|!myArray4)
+document.getElementById("password").style.borderColor="red"
+else
+document.getElementById("password").style.borderColor="initial"
+
+if(i1==""|i2==""|i3==""|i4=="")
+
+wa.style.display='block';
+
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>

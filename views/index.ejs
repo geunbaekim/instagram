@@ -1,0 +1,303 @@
+<meta charset="utf-8">
+<!DOCTYPE>
+<html>
+<head>
+<title>인스타그램</title>
+<style>
+body{background-color: rgba(189, 187, 180, 0.15); }
+#menu{padding-top: 20px;
+  height: 70px;
+display: inline-flex;
+background-color: white;
+border-bottom-style:solid;
+border-bottom-color: rgba(158, 158, 158, 0.35);
+border-bottom-width: 1px;
+width: 1247px;
+}
+#icon{display: inline-block; width: 60px; margin-left: 50px;}
+#logo{display: inline-block; width: 200px; padding-left: 30px; border-left-style:solid;
+border-left-color: rgba(158, 158, 158, 0.35);}
+#serch{display: inline-block; margin-left: 175px;padding-top:15px; }
+#place{display: inline-block; margin-left: 200px;}
+#like{display: inline-block; margin-left: 20px;}
+#character{display: inline-block; margin-left: 20px;}
+#main{ height: 5000px;}
+.line{width: 600px; height: 850px; background-color: white;  margin:0 auto; margin-top: 50px;
+border-color:rgba(158, 158, 158, 0.35); border-style: solid; border-width: 1px; }
+
+#l_top{display: inline-flex; height: 80px;width: 600px;}
+#l_pic{display: inline-flex; height: 620px;width: 600px;}
+#l_bottom{display: inline-block; height: 150px;width: 600px;}
+#id{padding-top: 20px;}
+#time{padding-top: 20px; margin-left: 390px; font-weight: 500;}
+.likes{padding-top: 20px; margin-left: 30px; font-weight: 500; height: 30px; width: 600px;}
+#reid{display: inline-flex; margin-left: 30px; font-weight: 100; height: 40px; width: 80px; }
+#re{display: inline-flex;}
+#rein{display:flex;}
+
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+
+    border: 1px solid #888;
+    width: 400px;
+    height: 180px;
+}
+.dec{width: 400px;
+height: 60px;}
+.copy{width: 400px;
+height: 60px;}
+.close{width: 400px;
+height: 60px;}
+
+</style>
+</head>
+<body>
+<div id="menu">
+
+  <div id="home">
+<div id="icon"><img src="/images/1.png" ></div>
+<div id="logo"><img src="/images/2.png" ></div>
+  </div>
+
+  <div id="serch"><input id="inp" type="serch" onfocus="myfunction1()" onblur="myfunction2()" name="serch" placeholder="검색" style="width: 200;
+height: 25; text-align:center;" /><br /></div>
+
+  <div id="function">
+    <div id="place"><img src="/images/3.png" ></div>
+    <div id="like"><img src="/images/4.png" ></div>
+    <div id="character"><img src="/images/5.png" ></div>
+  </div>
+
+
+  </div>
+<div id="main">
+ <div class="line">
+<div id="l_top">
+  <div id="ps"><img src="/images/6.png" style="width:70; height:70;"></div>
+  <div id="id"><a href=“” style="color:black; text-decoration:none; font-weight: 500;">gon__s.h</a></div>
+  <div id="time">1시간</div>
+</div>
+<div id="l_pic"><img src="/images/10369465_636636916422480_389971062_n.jpg" ></div>
+<div id="l_bottom">
+<div class="likes">좋아요 1개</div>
+<div id="reid"><a href=“” style="color:black; text-decoration:none; font-weight: 500;">gon__s.h</a></div>
+<div id="re">HTML<a href=“” style="color:#003569; text-decoration:none;">#openyearround</a></div>
+<div id="rein"><div><img class="ht" src="/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png"></div><div><input type="serch" name="serch" placeholder="댓글 달기..." style="width: 500;
+height: 35; border-color:white;" /><br /></div><div><button class="b1">ooo
+</button></div></div>
+</div>
+ </div>
+
+</div>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <button class="dec">부적절한 콘텐츠 신고</button>
+    <button class="copy">퍼가기</button>
+    <button class="close">취소</button>
+  </div>
+
+</div>
+
+
+
+<script>
+
+var main=document.getElementById("main");
+var rep=main.innerHTML;
+var modals = document.getElementById('myModal');
+var input=document.getElementById("inp");
+var lin=document.getElementsByClassName("line");
+var hat=document.getElementsByClassName("ht");
+var like=document.getElementsByClassName('likes');
+// Get the button that opens the modal
+var btn = document.getElementsByClassName("b1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close");
+for(var i=0;i<=3;i++){
+  main.innerHTML+=rep;
+}
+
+lin[0].onmouseover=function(){
+  lin[0].style.boxShadow="10px 10px 5px grey";
+
+}
+lin[1].onmouseover=function(){
+  lin[1].style.boxShadow="10px 10px 5px grey";
+
+}
+lin[2].onmouseover=function(){
+  lin[2].style.boxShadow="10px 10px 5px grey";
+
+}
+lin[3].onmouseover=function(){
+  lin[3].style.boxShadow="10px 10px 5px grey";
+
+}
+lin[4].onmouseover=function(){
+  lin[4].style.boxShadow="10px 10px 5px grey";
+
+}
+lin[0].onmouseout=function(){
+  lin[0].style.boxShadow="none";
+
+}
+lin[1].onmouseout=function(){
+  lin[1].style.boxShadow="none";
+
+}
+lin[2].onmouseout=function(){
+  lin[2].style.boxShadow="none";
+
+}
+lin[3].onmouseout=function(){
+  lin[3].style.boxShadow="none";
+
+}
+lin[4].onmouseout=function(){
+  lin[4].style.boxShadow="none";
+
+}
+
+hat[0].onclick= function(){
+  if(hat[0].src.match('/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png'))
+{hat[0].src="/images/ionicons_2-0-1_heart_28_10_e74c3c_ecf0f1.png";
+like[0].innerHTML="좋아요 2개";}
+else
+{hat[0].src="/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png";
+like[0].innerHTML="좋아요 1개";}
+
+}
+hat[1].onclick= function(){
+  if(hat[1].src.match('/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png'))
+{hat[1].src="/images/ionicons_2-0-1_heart_28_10_e74c3c_ecf0f1.png";
+like[1].innerHTML="좋아요 2개";}
+else
+{hat[1].src="/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png";
+like[1].innerHTML="좋아요 1개";}
+
+}
+hat[2].onclick= function(){
+  if(hat[2].src.match('/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png'))
+{hat[2].src="/images/ionicons_2-0-1_heart_28_10_e74c3c_ecf0f1.png";
+like[2].innerHTML="좋아요 2개";}
+else
+{hat[2].src="/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png";
+like[2].innerHTML="좋아요 1개";}
+
+}
+hat[3].onclick= function(){
+  if(hat[3].src.match('/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png'))
+{hat[3].src="/images/ionicons_2-0-1_heart_28_10_e74c3c_ecf0f1.png";
+like[3].innerHTML="좋아요 2개";}
+else
+{hat[3].src="/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png";
+like[3].innerHTML="좋아요 1개";}
+
+}
+hat[4].onclick= function(){
+  if(hat[4].src.match('/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png'))
+{hat[4].src="/images/ionicons_2-0-1_heart_28_10_e74c3c_ecf0f1.png";
+like[4].innerHTML="좋아요 2개";}
+else
+{hat[4].src="/images/ionicons_2-0-1_android-favorite-outline_28_10_2c3e50_ecf0f1.png";
+like[4].innerHTML="좋아요 1개";}
+
+}
+
+
+
+
+
+
+// When the user clicks the button, open the modal
+btn[0].onclick = function() {
+    modals.style.display = "block";
+}
+btn[1].onclick = function() {
+    modals.style.display = "block";
+}
+btn[2].onclick = function() {
+    modals.style.display = "block";
+}
+btn[3].onclick = function() {
+    modals.style.display = "block";
+}
+btn[4].onclick = function() {
+    modals.style.display = "block";
+}
+
+
+
+
+// When the user clicks on <span> (x), close the modal
+span[0].onclick = function() {
+    modals.style.display = "none";
+}
+span[1].onclick = function() {
+    modals.style.display = "none";
+}
+span[2].onclick = function() {
+    modals.style.display = "none";
+}
+span[3].onclick = function() {
+    modals.style.display = "none";
+}
+span[4].onclick = function() {
+    modals.style.display = "none";
+}
+
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function myfunction1(){
+input.style.textAlign="left";
+
+}
+function myfunction2(){
+input.style.textAlign="center";
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

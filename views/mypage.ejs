@@ -1,0 +1,438 @@
+<meta charset="utf-8">
+<!DOCTYPE>
+<html>
+<head>
+<title>인스타그램</title>
+<style>
+body{background-color: rgba(189, 187, 180, 0.15); }
+#menu{padding-top: 20px;
+  height: 70px;
+display: inline-flex;
+background-color: white;
+border-bottom-style:solid;
+border-bottom-color: rgba(158, 158, 158, 0.35);
+border-bottom-width: 1px;
+width: 1247px;
+}
+#icon{display: inline-block; width: 60px; margin-left: 50px;}
+#logo{display: inline-block; width: 200px; padding-left: 30px; border-left-style:solid;
+border-left-color: rgba(158, 158, 158, 0.35);}
+#serch{display: inline-block; margin-left: 175px;padding-top:15px; }
+#place{display: inline-block; margin-left: 200px;}
+#like{display: inline-block; margin-left: 20px;}
+#character{display: inline-block; margin-left: 20px;}
+#main{ height: 5000px; margin: auto; position: relative;}
+#mtop{margin-left: 200px; padding-top: 50px; width: 700px; display:flex;}
+#inf{display: inline-flex;}
+#follow{display:inline-flex;}
+#myname{font-size: 30;}
+#pfr{margin-left: 60px;}
+#mmid{padding-top: 50px; width: 80%; height: 100%; margin: auto; }
+
+#pop{width: 60%; margin-left: 240px; margin-top: 80px; display: flex; border-style: solid; border-color: rgba(158, 158, 158, 0.35);
+border-width: 1px; position: absolute; background-color: white;}
+#pl{width: 50%;}
+#pr{width: 50%;}
+
+#prt{display: inline-flex; height: 80px;width: 370px;}
+#id{padding-top: 20px;}
+#time{padding-top: 20px; margin-left: 210px; font-weight: 500;}
+
+#prb{display: inline-block; height: 150px;width: 370px;}
+#likes{padding-top: 10px; margin-left: 30px; font-weight: 500; height: 30px; width: 370px;}
+#reid{display: inline-flex; margin-left: 30px; font-weight: 100; height: 40px; width: 80px; }
+#re{display: inline-flex;}
+#rein{padding-top: 140px;}
+
+
+
+
+.rpt{position: relative; width: 300px; display: inline-block; margin-left: 25px;}
+.lr{position: absolute; margin-top: 150px; margin-left: 85px; display: none;}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+
+    border: 1px solid #888;
+    width: 400px;
+    height: 120px;
+}
+.modal-content3 {
+    background-color: #fefefe;
+    margin: auto;
+
+    border: 1px solid #888;
+    width: 400px;
+    height: 150px;
+}
+
+.logout{width: 400px;
+height: 60px;}
+.close{width: 400px;
+height: 60px;}
+
+.cb{width: 400px;
+height: 30px;}
+.db{width: 400px;
+height: 30px;}
+.tp{width: 400px;
+height: 30px;}
+.pu{width: 400px;
+height: 30px;}
+.cc{width: 400px;
+height: 30px;}
+
+
+</style>
+</head>
+<body>
+<div id="menu">
+
+  <div id="home">
+<div id="icon"><img src="/images/1.png" ></div>
+<div id="logo"><img src="/images/2.png" ></div>
+  </div>
+
+  <div id="serch"><input type="serch" name="serch" placeholder="검색" style="width: 200;
+height: 25;" /><br /></div>
+
+  <div id="function">
+    <div id="place"><img src="/images/3.png" ></div>
+    <div id="like"><img src="/images/4.png" ></div>
+    <div id="character"><img src="/images/5.png" ></div>
+  </div>
+
+
+  </div>
+<div id="main">
+
+
+
+
+
+
+
+
+
+<div id="mtop">
+<div id="profile" ><img id="pff" src="/images/profile.png" style="width: 200px;"></div>
+<div id="pfr">
+  <div id="inf">
+    <div id="myname">mmojhtte</div>
+    <div id="pfed" style="margin-left:20px; padding-top:12px;"><button id="bt1">프로필 편집</button></div>
+    <div id="modalbt" style="margin-left:20px; padding-top:12px;"><button id="bt2">ooo</button></div>
+  </div>
+<div id="follow" style="margin-top:20px;">
+  <div id="post">게시물 9개</div>
+  <div id="fer" style="margin-left:20px;">팔로워 1.1K명</div>
+  <div id="fow" style="margin-left:20px;">팔로우 100명</div>
+</div>
+<div id="name" style="margin-top:20px;">김근배</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="mmid"><div class='rpt'><div class='lr' >좋아요 10개 댓글 10개</div><img class="im"  src="/images/oyr.png" style="width:300px; margin-left:25px; margin-top:25px;"></div></div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <button class="logout">로그아웃</button>
+    <button class="close">취소</button>
+  </div>
+
+</div>
+
+
+
+<div id="myModal2" class="modal2">
+
+  <!-- Modal content -->
+  <div id="pop">
+  <div id="pl">
+  <img src="/images/oyr.png" style="width:370px;">
+
+  </div>
+  <div id="pr">
+  <div id="prt"><div id="ps"><img src="/images/6.png" style="width:70; height:70;"></div>
+  <div id="id"><a href=“” style="color:black; text-decoration:none; font-weight: 500;">gon__s.h</a></div>
+  <div id="time">1시간</div></div>
+  <div id="prb">
+    <div id="likes">좋아요 1개</div>
+  <div id="reid"><a href=“” style="color:black; text-decoration:none; font-weight: 500;">gon__s.h</a></div>
+  <div id="re">HTML<a href=“” style="color:#003569; text-decoration:none;">#openyearround</a></div>
+  <div id="rein"><input type="serch" name="serch" style="width: 370;
+  height: 35; border-color:white;" />댓글입력<br /></div>
+  </div>
+
+  </div>
+
+
+  </div>
+</div>
+
+
+
+<div id="myModal3" class="modal3">
+
+  <!-- Modal content -->
+  <div class="modal-content3">
+    <button class="cb">프로필 사진 바꾸기</button>
+    <button class="db">현재 사진 삭제</button>
+    <button class="tp">사진 찍기</button>
+    <button class="pu">사진 업로드</button>
+    <button class="cc">취소</button>
+  </div>
+
+</div>
+
+
+
+
+
+
+<script>
+var posts=document.getElementById("mmid");
+var rep=posts.innerHTML;
+var modal = document.getElementById('myModal');
+var modal2 = document.getElementById('myModal2');
+var modal3 = document.getElementById('myModal3');
+var lrr=document.getElementsByClassName('lr');
+var Im=document.getElementsByClassName('im');
+var pfff=document.getElementById('pff');
+
+// Get the button that opens the modal
+var btn = document.getElementById("bt2");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var span3 = document.getElementsByClassName("cc")[0];
+
+
+for(var i=0;i<=7;i++)
+{
+  posts.innerHTML+=rep;
+}
+
+
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+span3.onclick = function() {
+    modal3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    else if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+
+    else if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+
+
+
+
+}
+
+
+
+pfff.onclick = function() {
+    modal3.style.display = "block";
+}
+
+Im[0].onclick = function() {
+    modal2.style.display = "block";
+}
+Im[1].onclick = function() {
+    modal2.style.display = "block";
+}
+Im[2].onclick = function() {
+    modal2.style.display = "block";
+}
+Im[3].onclick = function() {
+    modal2.style.display = "block";
+}
+Im[4].onclick = function() {
+    modal2.style.display = "block";
+}
+Im[5].onclick = function() {
+    modal2.style.display = "block";
+}
+Im[6].onclick = function() {
+    modal2.style.display = "block";
+}
+Im[7].onclick = function() {
+    modal2.style.display = "block";
+}
+Im[8].onclick = function() {
+    modal2.style.display = "block";
+}
+
+
+
+Im[0].onmouseover=function() {
+        Im[0].style.opacity='0.1';
+        lrr[0].style.display="block";
+      }
+Im[0].onmouseout=function() {
+              Im[0].style.opacity='1';
+              lrr[0].style.display="none";
+            }
+
+Im[1].onmouseover=function() {
+        Im[1].style.opacity='0.1';
+        lrr[1].style.display="block";
+      }
+Im[1].onmouseout=function() {
+              Im[1].style.opacity='1';
+              lrr[1].style.display="none";
+            }
+
+Im[2].onmouseover=function() {
+             Im[2].style.opacity='0.1';
+             lrr[2].style.display="block";
+                  }
+Im[2].onmouseout=function() {
+            Im[2].style.opacity='1';
+            lrr[2].style.display="none";
+          }
+Im[3].onmouseover=function() {
+                                     Im[3].style.opacity='0.1';
+                                     lrr[3].style.display="block";
+                                          }
+Im[3].onmouseout=function() {
+                                    Im[3].style.opacity='1';
+                                    lrr[3].style.display="none";
+                                                }
+
+Im[4].onmouseover=function() {
+                                    Im[4].style.opacity='0.1';
+                                    lrr[4].style.display="block";
+}
+Im[4].onmouseout=function() {
+                                   Im[4].style.opacity='1';
+                                  lrr[4].style.display="none";
+}
+Im[5].onmouseover=function() {
+                                    Im[5].style.opacity='0.1';
+                                    lrr[5].style.display="block";
+}
+Im[5].onmouseout=function() {
+                                   Im[5].style.opacity='1';
+                                  lrr[5].style.display="none";
+}
+Im[6].onmouseover=function() {
+                                    Im[6].style.opacity='0.1';
+                                    lrr[6].style.display="block";
+}
+Im[6].onmouseout=function() {
+                                   Im[6].style.opacity='1';
+                                  lrr[6].style.display="none";
+}
+Im[7].onmouseover=function() {
+                                    Im[7].style.opacity='0.1';
+                                    lrr[7].style.display="block";
+}
+Im[7].onmouseout=function() {
+                                   Im[7].style.opacity='1';
+                                  lrr[7].style.display="none";
+}
+Im[8].onmouseover=function() {
+                                    Im[8].style.opacity='0.1';
+                                    lrr[8].style.display="block";
+}
+Im[8].onmouseout=function() {
+                                   Im[8].style.opacity='1';
+                                  lrr[8].style.display="none";
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

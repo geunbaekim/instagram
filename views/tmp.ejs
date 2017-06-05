@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<!DOCTYPE>
+<html>
+<head>
+<title></title>
+<style>
+
+</style>
+</head>
+<body>
+
+
+<script>
+var express = require('express');
+var session= require('express-session');
+var router = express();
+
+/* GET home page. */
+router.use(session({
+ secret:'1234dsps@g1234!#s$sda',
+ resave: false,
+ saveUninitialized: true
+}));
+
+
+
+router.get('/count', function(req, res){
+    req.session.count=1;
+    res.send("count:"+req.session.count);
+
+});
+
+
+
+module.exports = router;
+</script>
+
+
+
+</body>
+</html>
